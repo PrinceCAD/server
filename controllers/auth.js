@@ -11,8 +11,7 @@ const CreatePost = async (req, res) => {
   const newPost = await new Post({
     content: req.body.content,
     author: req.body.author,
-    picture:
-      "https://firebasestorage.googleapis.com/v0/b/crown-ff1d9.appspot.com/o/profile%2Fboy-dynamic-premium.png?alt=media&token=f7840aa6-621b-4e8a-a899-7e7102330f40",
+    picture: req.body.picture,
   });
 
   try {
